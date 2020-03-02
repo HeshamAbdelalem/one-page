@@ -1,0 +1,90 @@
+@font-face {
+    font-family: ShoroqFont;
+    src: url(/fonts/ShoroqFont.ttf);
+}
+
+$main-color: #eeeeee;
+$sec-color: #36597b;
+$main-font-color: #383838;
+$sec-font-color: #eeeeee;
+
+$main-font: ShoroqFont;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $main-color;
+    width: 1220px;
+    margin: 0 auto;
+    direction: rtl;
+    font-family: $main-font;
+}
+
+nav {
+    display: flex;
+    min-height: 60px;
+    background-color: $sec-color;
+    color: $sec-font-color;
+
+    .nav__tabs {
+        display: flex;
+        align-items: center;
+        margin-right: 70px;
+
+        p {
+            padding: 5px 16px 8px 16px;
+            margin-top: 15px;
+            margin-right: 10px;
+            font-size: 1.3rem;
+            min-width: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nav__tabs__selected {
+            background-color: $main-color;
+            border-radius: 12px 12px 0px 0px;
+            color: $main-font-color
+        }
+    }
+
+    .nav__icons {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 600px;
+
+        p {
+            font-size: 1rem;
+            display: flex;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.subNav {
+    margin-top: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    min-height: 60px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+
+    .round-text {
+        font-size: 1.1rem;
+        color: $sec-font-color;
+        padding: 5px 40px;
+        background-color: $sec-color;
+        margin-right: 15px;
+        border-radius: 10px;
+    }
+
+    .round-text-light {
+        background-color: rgba($sec-color, 0.5);
+    }
+}
